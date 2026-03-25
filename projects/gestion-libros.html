@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Libros | Martín Miranda</title>
+  <meta name="description" content="Proyecto fullstack para gestión de libros con autenticación. Creado para practicar IA y tecnologías modernas.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">mm<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="/skills/" data-es="Skills" data-en="Skills">Skills</a></li>
+        <li><a href="/projects/" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+        <li><a href="/#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-option active" data-lang="es">ES</span>
+          <span class="lang-separator">/</span>
+          <span class="lang-option" data-lang="en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/" data-es="Inicio" data-en="Home">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/projects/" data-es="Proyectos" data-en="Projects">Proyectos</a>
+        <span class="breadcrumb-sep">/</span>
+        <span data-es="Gestión de Libros" data-en="Book Management System">Gestión de Libros</span>
+      </div>
+      <div class="page-badges">
+        <span class="project-badge" data-es="En desarrollo" data-en="In development">En desarrollo</span>
+        <span class="project-badge-ai" data-es="Hecho con IA" data-en="AI-assisted">Hecho con IA</span>
+      </div>
+      <h1 data-es="Gestión de Libros" data-en="Book Management System">Gestión de Libros</h1>
+      <p data-es="Proyecto fullstack creado para practicar y aprender el uso de IA y tecnologías modernas en programación. Sistema CRUD completo para gestión de libros con autenticación." data-en="Fullstack project created to practice and learn AI usage and modern programming technologies. Complete CRUD system for book management with authentication.">Proyecto fullstack creado para practicar y aprender el uso de IA y tecnologías modernas en programación. Sistema CRUD completo para gestión de libros con autenticación.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="project-detail-grid">
+        <div class="project-info-card reveal">
+          <h3 data-es="Características" data-en="Features">Características</h3>
+          <ul>
+            <li data-es="CRUD completo de libros" data-en="Full book CRUD">CRUD completo de libros</li>
+            <li data-es="Autenticación de usuarios" data-en="User authentication">Autenticación de usuarios</li>
+            <li data-es="API REST con NestJS" data-en="REST API with NestJS">API REST con NestJS</li>
+            <li data-es="Frontend con Angular" data-en="Angular frontend">Frontend con Angular</li>
+            <li data-es="Base de datos PostgreSQL" data-en="PostgreSQL database">Base de datos PostgreSQL</li>
+            <li data-es="Integración con herramientas de IA" data-en="AI tools integration">Integración con herramientas de IA</li>
+          </ul>
+        </div>
+        <div class="project-info-card reveal">
+          <h3>Tech Stack</h3>
+          <div class="project-tech-grid">
+            <span class="tech-badge">NestJS</span>
+            <span class="tech-badge">Angular</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">TypeScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/martinmiranda14/GestionLibros" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <a href="/projects/" class="back-link" data-es="← Volver a proyectos" data-en="← Back to projects">← Volver a proyectos</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-es="Diseñado y desarrollado por Martín Miranda" data-en="Designed and developed by Martín Miranda">Diseñado y desarrollado por Martín Miranda</p>
+      <p class="footer-year">2025</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

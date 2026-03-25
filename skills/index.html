@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Martín Miranda</title>
+  <meta name="description" content="Habilidades técnicas de Martín Miranda - DevOps, Kubernetes, AWS, GCP, Terraform, CI/CD">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">mm<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="/skills/" class="active" data-es="Skills" data-en="Skills">Skills</a></li>
+        <li><a href="/projects/" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+        <li><a href="/#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-option active" data-lang="es">ES</span>
+          <span class="lang-separator">/</span>
+          <span class="lang-option" data-lang="en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/" data-es="Inicio" data-en="Home">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <span data-es="Skills" data-en="Skills">Skills</span>
+      </div>
+      <h1 data-es="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h1>
+      <p data-es="Detalle de las tecnologías y herramientas con las que trabajo día a día." data-en="Detailed overview of the technologies and tools I work with daily.">Detalle de las tecnologías y herramientas con las que trabajo día a día.</p>
+    </div>
+  </section>
+
+  <!-- Orchestration -->
+  <section class="section" id="orchestration">
+    <div class="container">
+      <h2 class="section-title reveal" data-es="Orquestación y Contenedores" data-en="Orchestration & Containers">Orquestación y Contenedores</h2>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Kubernetes</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:90%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Implementación y mantenimiento de clusters en producción para clientes críticos en Cotalker. Gestión de namespaces, RBAC, ingress controllers, HPA y configuración de recursos. Experiencia con GKE y EKS." data-en="Implementation and maintenance of production clusters for critical clients at Cotalker. Namespace management, RBAC, ingress controllers, HPA, and resource configuration. Experience with GKE and EKS.">Implementación y mantenimiento de clusters en producción para clientes críticos en Cotalker. Gestión de namespaces, RBAC, ingress controllers, HPA y configuración de recursos. Experiencia con GKE y EKS.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Docker</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:90%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Containerización de aplicaciones, creación de imágenes optimizadas multi-stage, Docker Compose para entornos de desarrollo. Migración de aplicaciones legacy a contenedores." data-en="Application containerization, optimized multi-stage image creation, Docker Compose for development environments. Migration of legacy applications to containers.">Containerización de aplicaciones, creación de imágenes optimizadas multi-stage, Docker Compose para entornos de desarrollo. Migración de aplicaciones legacy a contenedores.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Helm</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:85%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Liderazgo en la estandarización de deployments con Helm charts. Desarrollo de templates reutilizables para diferentes tipos de aplicaciones. Reducción de errores manuales en producción." data-en="Led the standardization of deployments with Helm charts. Development of reusable templates for different application types. Reduction of manual errors in production.">Liderazgo en la estandarización de deployments con Helm charts. Desarrollo de templates reutilizables para diferentes tipos de aplicaciones. Reducción de errores manuales en producción.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cloud & IaC -->
+  <section class="section section-alt" id="cloud">
+    <div class="container">
+      <h2 class="section-title reveal" data-es="Cloud & Infrastructure as Code" data-en="Cloud & Infrastructure as Code">Cloud & Infrastructure as Code</h2>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Google Cloud Platform (GCP)</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:85%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Participación fundamental en la migración completa de infraestructura de AWS a GCP. Experiencia con GKE, Cloud Storage, Cloud SQL, VPC networking, IAM y Cloud Monitoring." data-en="Key participation in the complete infrastructure migration from AWS to GCP. Experience with GKE, Cloud Storage, Cloud SQL, VPC networking, IAM, and Cloud Monitoring.">Participación fundamental en la migración completa de infraestructura de AWS a GCP. Experiencia con GKE, Cloud Storage, Cloud SQL, VPC networking, IAM y Cloud Monitoring.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Amazon Web Services (AWS)</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:70%"></div></div>
+            <span class="skill-level-label" data-es="Intermedio" data-en="Intermediate">Intermedio</span>
+          </div>
+        </div>
+        <p data-es="Experiencia con EKS, EC2, S3, RDS, VPC y IAM. Gestión de infraestructura pre-migración a GCP. En preparación para certificación AWS Cloud Practitioner." data-en="Experience with EKS, EC2, S3, RDS, VPC, and IAM. Infrastructure management pre-GCP migration. Preparing for AWS Cloud Practitioner certification.">Experiencia con EKS, EC2, S3, RDS, VPC y IAM. Gestión de infraestructura pre-migración a GCP. En preparación para certificación AWS Cloud Practitioner.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Terraform</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:75%"></div></div>
+            <span class="skill-level-label" data-es="Intermedio-Avanzado" data-en="Intermediate-Advanced">Intermedio-Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Gestión de infraestructura como código para garantizar consistencia y reproducibilidad. Módulos reutilizables, state management y planificación de cambios en producción." data-en="Infrastructure as code management ensuring consistency and reproducibility. Reusable modules, state management, and production change planning.">Gestión de infraestructura como código para garantizar consistencia y reproducibilidad. Módulos reutilizables, state management y planificación de cambios en producción.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages -->
+  <section class="section" id="languages">
+    <div class="container">
+      <h2 class="section-title reveal" data-es="Lenguajes de Programación" data-en="Programming Languages">Lenguajes de Programación</h2>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>TypeScript</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:80%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Desarrollo de aplicaciones fullstack con NestJS (backend) y Angular (frontend). Tipado estricto, interfaces, generics y patrones de diseño." data-en="Fullstack application development with NestJS (backend) and Angular (frontend). Strict typing, interfaces, generics, and design patterns.">Desarrollo de aplicaciones fullstack con NestJS (backend) y Angular (frontend). Tipado estricto, interfaces, generics y patrones de diseño.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">NestJS</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Node.js</span>
+        </div>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>JavaScript</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:80%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="ES6+, async/await, manipulación del DOM, desarrollo web frontend y backend con Node.js." data-en="ES6+, async/await, DOM manipulation, frontend and backend web development with Node.js.">ES6+, async/await, manipulación del DOM, desarrollo web frontend y backend con Node.js.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Python</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:60%"></div></div>
+            <span class="skill-level-label" data-es="Intermedio" data-en="Intermediate">Intermedio</span>
+          </div>
+        </div>
+        <p data-es="Scripts de automatización, herramientas de hardening de seguridad, procesamiento de datos. Uso en tareas DevOps y scripting." data-en="Automation scripts, security hardening tools, data processing. Used for DevOps tasks and scripting.">Scripts de automatización, herramientas de hardening de seguridad, procesamiento de datos. Uso en tareas DevOps y scripting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Monitoring -->
+  <section class="section section-alt" id="monitoring">
+    <div class="container">
+      <h2 class="section-title reveal" data-es="Monitoreo y Observabilidad" data-en="Monitoring & Observability">Monitoreo y Observabilidad</h2>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Prometheus</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:80%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Configuración de métricas, alertas y service discovery. Integración con Kubernetes para monitoreo de clusters y aplicaciones en producción." data-en="Metrics configuration, alerting, and service discovery. Kubernetes integration for production cluster and application monitoring.">Configuración de métricas, alertas y service discovery. Integración con Kubernetes para monitoreo de clusters y aplicaciones en producción.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Grafana</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:80%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Diseño de dashboards para visualización de métricas de infraestructura y aplicaciones. Configuración de alertas y notificaciones." data-en="Dashboard design for infrastructure and application metrics visualization. Alert and notification configuration.">Diseño de dashboards para visualización de métricas de infraestructura y aplicaciones. Configuración de alertas y notificaciones.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>ElasticSearch</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:60%"></div></div>
+            <span class="skill-level-label" data-es="Intermedio" data-en="Intermediate">Intermedio</span>
+          </div>
+        </div>
+        <p data-es="Gestión de logs centralizados, búsqueda y análisis de datos. Integración con stack de observabilidad." data-en="Centralized log management, search, and data analysis. Integration with observability stack.">Gestión de logs centralizados, búsqueda y análisis de datos. Integración con stack de observabilidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security -->
+  <section class="section" id="security">
+    <div class="container">
+      <h2 class="section-title reveal" data-es="Seguridad y Compliance" data-en="Security & Compliance">Seguridad y Compliance</h2>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>ISO 27001</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:85%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Integré el equipo implementador de controles de seguridad ISO 27001 en Cotalker. Lideré el proceso de mantención 1 de la certificación (2025). Participación en auditorías internas y externas. Desarrollo de documentación técnica y políticas de seguridad." data-en="Joined the ISO 27001 security controls implementation team at Cotalker. Led the surveillance audit 1 process (2025). Participated in internal and external audits. Developed technical documentation and security policies.">Integré el equipo implementador de controles de seguridad ISO 27001 en Cotalker. Lideré el proceso de mantención 1 de la certificación (2025). Participación en auditorías internas y externas. Desarrollo de documentación técnica y políticas de seguridad.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3 data-es="Ciberseguridad" data-en="Cybersecurity">Ciberseguridad</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:65%"></div></div>
+            <span class="skill-level-label" data-es="Intermedio" data-en="Intermediate">Intermedio</span>
+          </div>
+        </div>
+        <p data-es="Certificación en ciberseguridad (Coderhouse 2025). Conocimientos en hardening de sistemas, análisis de vulnerabilidades y mejores prácticas de seguridad." data-en="Cybersecurity certification (Coderhouse 2025). Knowledge in system hardening, vulnerability analysis, and security best practices.">Certificación en ciberseguridad (Coderhouse 2025). Conocimientos en hardening de sistemas, análisis de vulnerabilidades y mejores prácticas de seguridad.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Hardening</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:65%"></div></div>
+            <span class="skill-level-label" data-es="Intermedio" data-en="Intermediate">Intermedio</span>
+          </div>
+        </div>
+        <p data-es="Desarrollo de scripts y herramientas de hardening para sistemas Linux. Automatización de configuraciones de seguridad." data-en="Development of hardening scripts and tools for Linux systems. Security configuration automation.">Desarrollo de scripts y herramientas de hardening para sistemas Linux. Automatización de configuraciones de seguridad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodologies -->
+  <section class="section section-alt" id="methodologies">
+    <div class="container">
+      <h2 class="section-title reveal" data-es="Metodologías y Herramientas" data-en="Methodologies & Tools">Metodologías y Herramientas</h2>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>CI/CD</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:85%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Diseño e implementación de pipelines de integración y despliegue continuo. GitHub Actions, automatización de builds, tests y deployments." data-en="Design and implementation of continuous integration and deployment pipelines. GitHub Actions, build, test, and deployment automation.">Diseño e implementación de pipelines de integración y despliegue continuo. GitHub Actions, automatización de builds, tests y deployments.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>DevOps / SRE</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:85%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Cultura DevOps aplicada al ciclo completo de desarrollo. Prácticas SRE para asegurar disponibilidad y confiabilidad. Incident management, postmortems y mejora continua." data-en="DevOps culture applied to the full development lifecycle. SRE practices ensuring availability and reliability. Incident management, postmortems, and continuous improvement.">Cultura DevOps aplicada al ciclo completo de desarrollo. Prácticas SRE para asegurar disponibilidad y confiabilidad. Incident management, postmortems y mejora continua.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Git</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:85%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Flujos de trabajo con Git Flow y trunk-based development. Code reviews, branching strategies y gestión de repositorios." data-en="Git Flow and trunk-based development workflows. Code reviews, branching strategies, and repository management.">Flujos de trabajo con Git Flow y trunk-based development. Code reviews, branching strategies y gestión de repositorios.</p>
+      </div>
+
+      <div class="skill-detail reveal">
+        <div class="skill-detail-header">
+          <h3>Linux</h3>
+          <div class="skill-level">
+            <div class="skill-level-bar"><div class="skill-level-fill" style="width:80%"></div></div>
+            <span class="skill-level-label" data-es="Avanzado" data-en="Advanced">Avanzado</span>
+          </div>
+        </div>
+        <p data-es="Administración de servidores Linux. Shell scripting, gestión de servicios, networking, troubleshooting y optimización de rendimiento." data-en="Linux server administration. Shell scripting, service management, networking, troubleshooting, and performance optimization.">Administración de servidores Linux. Shell scripting, gestión de servicios, networking, troubleshooting y optimización de rendimiento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <a href="/" class="btn btn-outline" data-es="Volver al inicio" data-en="Back to home">Volver al inicio</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-es="Diseñado y desarrollado por Martín Miranda" data-en="Designed and developed by Martín Miranda">Diseñado y desarrollado por Martín Miranda</p>
+      <p class="footer-year">2025</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

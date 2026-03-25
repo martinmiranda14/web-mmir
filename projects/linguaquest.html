@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaQuest | Martín Miranda</title>
+  <meta name="description" content="RPG de aprendizaje de idiomas que combina gamificación con educación.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">mm<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="/skills/" data-es="Skills" data-en="Skills">Skills</a></li>
+        <li><a href="/projects/" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+        <li><a href="/#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-option active" data-lang="es">ES</span>
+          <span class="lang-separator">/</span>
+          <span class="lang-option" data-lang="en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/" data-es="Inicio" data-en="Home">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/projects/" data-es="Proyectos" data-en="Projects">Proyectos</a>
+        <span class="breadcrumb-sep">/</span>
+        <span data-es="LinguaQuest" data-en="LinguaQuest - Language Learning RPG">LinguaQuest</span>
+      </div>
+      <div class="page-badges">
+        <span class="project-badge" data-es="En desarrollo" data-en="In development">En desarrollo</span>
+        <span class="project-badge-ai" data-es="Hecho con IA" data-en="AI-assisted">Hecho con IA</span>
+      </div>
+      <h1 data-es="LinguaQuest" data-en="LinguaQuest - Language Learning RPG">LinguaQuest</h1>
+      <p data-es="RPG de aprendizaje de idiomas que combina gamificación con educación. Los jugadores aprenden vocabulario y gramática mientras avanzan en una aventura interactiva." data-en="Language learning RPG that combines gamification with education. Players learn vocabulary and grammar while progressing through an interactive adventure.">RPG de aprendizaje de idiomas que combina gamificación con educación. Los jugadores aprenden vocabulario y gramática mientras avanzan en una aventura interactiva.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="project-detail-grid">
+        <div class="project-info-card reveal">
+          <h3 data-es="Características" data-en="Features">Características</h3>
+          <ul>
+            <li data-es="Sistema de progresión RPG" data-en="RPG progression system">Sistema de progresión RPG</li>
+            <li data-es="Ejercicios interactivos de vocabulario" data-en="Interactive vocabulary exercises">Ejercicios interactivos de vocabulario</li>
+            <li data-es="Sistema de logros y recompensas" data-en="Achievement and reward system">Sistema de logros y recompensas</li>
+            <li data-es="Múltiples idiomas disponibles" data-en="Multiple languages available">Múltiples idiomas disponibles</li>
+            <li data-es="Interfaz responsive y accesible" data-en="Responsive and accessible interface">Interfaz responsive y accesible</li>
+          </ul>
+        </div>
+        <div class="project-info-card reveal">
+          <h3>Tech Stack</h3>
+          <div class="project-tech-grid">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">Vite</span>
+            <span class="tech-badge">TypeScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/martinmiranda14/linguaquest" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <a href="/projects/" class="back-link" data-es="← Volver a proyectos" data-en="← Back to projects">← Volver a proyectos</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-es="Diseñado y desarrollado por Martín Miranda" data-en="Designed and developed by Martín Miranda">Diseñado y desarrollado por Martín Miranda</p>
+      <p class="footer-year">2025</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

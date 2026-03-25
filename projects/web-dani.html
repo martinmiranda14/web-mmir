@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Dani | Martín Miranda</title>
+  <meta name="description" content="Sitio web personal para Danitza Villarroel Orrego, Directora de Orquesta en Valparaíso, Chile.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">mm<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="/skills/" data-es="Skills" data-en="Skills">Skills</a></li>
+        <li><a href="/projects/" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+        <li><a href="/#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-option active" data-lang="es">ES</span>
+          <span class="lang-separator">/</span>
+          <span class="lang-option" data-lang="en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/" data-es="Inicio" data-en="Home">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/projects/" data-es="Proyectos" data-en="Projects">Proyectos</a>
+        <span class="breadcrumb-sep">/</span>
+        <span data-es="Web Dani" data-en="Danitza Villarroel - Personal Website">Web Dani</span>
+      </div>
+      <div class="page-badges">
+        <span class="project-badge" data-es="En desarrollo" data-en="In development">En desarrollo</span>
+        <span class="project-badge-ai" data-es="Hecho con IA" data-en="AI-assisted">Hecho con IA</span>
+      </div>
+      <h1 data-es="Web Dani" data-en="Danitza Villarroel - Personal Website">Web Dani</h1>
+      <p data-es="Sitio web personal diseñado para Danitza Villarroel Orrego, Directora de Orquesta en Valparaíso, Chile. Presenta su biografía, trayectoria musical y próximos conciertos." data-en="Personal website designed for Danitza Villarroel Orrego, Orchestra Conductor in Valparaíso, Chile. Showcases her biography, musical career, and upcoming concerts.">Sitio web personal diseñado para Danitza Villarroel Orrego, Directora de Orquesta en Valparaíso, Chile. Presenta su biografía, trayectoria musical y próximos conciertos.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="project-detail-grid">
+        <div class="project-info-card reveal">
+          <h3 data-es="Características" data-en="Features">Características</h3>
+          <ul>
+            <li data-es="Diseño responsive y elegante" data-en="Responsive and elegant design">Diseño responsive y elegante</li>
+            <li data-es="Sección de biografía" data-en="Biography section">Sección de biografía</li>
+            <li data-es="Galería de eventos y conciertos" data-en="Events and concerts gallery">Galería de eventos y conciertos</li>
+            <li data-es="Información de contacto" data-en="Contact information">Información de contacto</li>
+            <li data-es="Optimizado para SEO" data-en="SEO optimized">Optimizado para SEO</li>
+          </ul>
+        </div>
+        <div class="project-info-card reveal">
+          <h3>Tech Stack</h3>
+          <div class="project-tech-grid">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">CSS</span>
+            <span class="tech-badge">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/martinmiranda14/web-dani" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <a href="/projects/" class="back-link" data-es="← Volver a proyectos" data-en="← Back to projects">← Volver a proyectos</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-es="Diseñado y desarrollado por Martín Miranda" data-en="Designed and developed by Martín Miranda">Diseñado y desarrollado por Martín Miranda</p>
+      <p class="footer-year">2025</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

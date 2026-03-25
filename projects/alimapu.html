@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión Alimapu v2 | Martín Miranda</title>
+  <meta name="description" content="Sistema de gestión integral para la orquesta musical Alimapu. Gestiona miembros, instrumentos, ensayos, eventos y comunicaciones.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">mm<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="/" data-es="Inicio" data-en="Home">Inicio</a></li>
+        <li><a href="/skills/" data-es="Skills" data-en="Skills">Skills</a></li>
+        <li><a href="/projects/" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+        <li><a href="/#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+          <span class="lang-option active" data-lang="es">ES</span>
+          <span class="lang-separator">/</span>
+          <span class="lang-option" data-lang="en">EN</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="/" data-es="Inicio" data-en="Home">Inicio</a>
+        <span class="breadcrumb-sep">/</span>
+        <a href="/projects/" data-es="Proyectos" data-en="Projects">Proyectos</a>
+        <span class="breadcrumb-sep">/</span>
+        <span data-es="Gestión Alimapu v2" data-en="Orchestra Management System v2">Gestión Alimapu v2</span>
+      </div>
+      <div class="page-badges">
+        <span class="project-badge" data-es="En desarrollo" data-en="In development">En desarrollo</span>
+        <span class="project-badge-ai" data-es="Hecho con IA" data-en="AI-assisted">Hecho con IA</span>
+      </div>
+      <h1 data-es="Gestión Alimapu v2" data-en="Orchestra Management System v2">Gestión Alimapu v2</h1>
+      <p data-es="Sistema de gestión integral para la orquesta musical Alimapu. Permite gestionar miembros, instrumentos, ensayos, eventos y comunicaciones. Construido como monorepo con Nx." data-en="Comprehensive management system for the Alimapu musical orchestra. Manages members, instruments, rehearsals, events, and communications. Built as an Nx monorepo.">Sistema de gestión integral para la orquesta musical Alimapu. Permite gestionar miembros, instrumentos, ensayos, eventos y comunicaciones. Construido como monorepo con Nx.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="project-detail-grid">
+        <div class="project-info-card reveal">
+          <h3 data-es="Características" data-en="Features">Características</h3>
+          <ul>
+            <li data-es="Gestión de miembros y roles" data-en="Member and role management">Gestión de miembros y roles</li>
+            <li data-es="Control de inventario de instrumentos" data-en="Instrument inventory control">Control de inventario de instrumentos</li>
+            <li data-es="Calendario de ensayos y eventos" data-en="Rehearsal and event calendar">Calendario de ensayos y eventos</li>
+            <li data-es="Sistema de comunicaciones internas" data-en="Internal communications system">Sistema de comunicaciones internas</li>
+            <li data-es="Autenticación y autorización" data-en="Authentication and authorization">Autenticación y autorización</li>
+            <li data-es="API REST documentada" data-en="Documented REST API">API REST documentada</li>
+          </ul>
+        </div>
+        <div class="project-info-card reveal">
+          <h3>Tech Stack</h3>
+          <div class="project-tech-grid">
+            <span class="tech-badge">Angular 21</span>
+            <span class="tech-badge">NestJS 11</span>
+            <span class="tech-badge">Prisma</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">Nx</span>
+            <span class="tech-badge">TypeScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/martinmiranda14/gestion-alimapu-v2" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <a href="/projects/" class="back-link" data-es="← Volver a proyectos" data-en="← Back to projects">← Volver a proyectos</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p data-es="Diseñado y desarrollado por Martín Miranda" data-en="Designed and developed by Martín Miranda">Diseñado y desarrollado por Martín Miranda</p>
+      <p class="footer-year">2025</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
