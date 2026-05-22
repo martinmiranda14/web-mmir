@@ -1,0 +1,82 @@
+---
+interface Breadcrumb {
+  href?: string;
+  es: string;
+  en: string;
+}
+
+interface Props {
+  titleEs: string;
+  titleEn: string;
+  descriptionEs?: string;
+  descriptionEn?: string;
+  breadcrumbs: Breadcrumb[];
+}
+
+const { titleEs, titleEn, descriptionEs, descriptionEn, breadcrumbs } = Astro.props;
+---
+
+<section
+  class="page-hero"
+  style="padding: calc(var(--nav-height) + 48px) 0 48px;"
+>
+  <div class="container-mmir">
+    <div
+      class="flex items-center gap-2 mb-4 text-xs"
+      style="font-family: var(--font-mono); color: var(--color-fg-muted);"
+    >
+      {
+        breadcrumbs.map((b, i) => (
+          <>
+            {i > 0 && <span style="color: var(--color-border);">/</span>}
+            {b.href ? (
+              <a
+                href={b.href}
+                class="breadcrumb-link"
+                data-es={b.es}
+                data-en={b.en}
+              >
+                {b.es}
+              </a>
+            ) : (
+              <span data-es={b.es} data-en={b.en}>{b.es}</span>
+            )}
+          </>
+        ))
+      }
+    </div>
+
+    <slot name="badges" />
+
+    <h1
+      class="font-extrabold tracking-tight mb-2"
+      style="font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.15;"
+      data-es={titleEs}
+      data-en={titleEn}
+    >
+      {titleEs}
+    </h1>
+    {
+      descriptionEs && descriptionEn && (
+        <p
+          class="max-w-2xl"
+          style="color: var(--color-fg-muted); font-size: 1.05rem; line-height: 1.7;"
+          data-es={descriptionEs}
+          data-en={descriptionEn}
+        >
+          {descriptionEs}
+        </p>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .breadcrumb-link {
+    color: var(--color-accent);
+    transition: opacity var(--transition);
+  }
+  .breadcrumb-link:hover {
+    opacity: 0.8;
+  }
+</style>

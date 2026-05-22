@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'skills'>;
+}
+
+const { entry } = Astro.props;
+const { name, level, levelLabel, description, tags } = entry.data;
+---
+
+<div class="card card-hover reveal">
+  <div class="flex flex-wrap justify-between items-center gap-3 mb-3">
+    <h3 class="text-lg font-semibold">{name}</h3>
+    <div class="flex items-center gap-2">
+      <div class="skill-level-bar">
+        <div class="skill-level-fill" style={`width:${level}%`}></div>
+      </div>
+      <span
+        class="text-xs"
+        style="font-family: var(--font-mono); color: var(--color-fg-muted);"
+        data-es={levelLabel.es}
+        data-en={levelLabel.en}
+      >
+        {levelLabel.es}
+      </span>
+    </div>
+  </div>
+  <p
+    class="text-sm leading-relaxed"
+    style="color: var(--color-fg-muted);"
+    data-es={description.es}
+    data-en={description.en}
+  >
+    {description.es}
+  </p>
+  {
+    tags.length > 0 && (
+      <div class="flex flex-wrap gap-2 mt-3">
+        {tags.map((tag) => (
+          <span class="mono-tag">{tag}</span>
+        ))}
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .skill-level-bar {
+    width: 48px;
+    height: 6px;
+    background: var(--color-border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .skill-level-fill {
+    height: 100%;
+    background: var(--color-accent);
+    border-radius: 3px;
+  }
+</style>

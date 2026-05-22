@@ -1,0 +1,29 @@
+---
+interface Props {
+  number: string;
+  labelEs: string;
+  labelEn: string;
+}
+
+const { number, labelEs, labelEn } = Astro.props;
+---
+
+<div
+  class="card card-hover text-center"
+  style="padding: 24px;"
+>
+  <span
+    class="block"
+    style="font-size: 2rem; font-weight: 800; color: var(--color-accent); letter-spacing: -1px; line-height: 1.2;"
+  >
+    {number}
+  </span>
+  <span
+    class="block mt-1 text-xs"
+    style="color: var(--color-fg-muted);"
+    data-es={labelEs}
+    data-en={labelEn}
+  >
+    {labelEs}
+  </span>
+</div>

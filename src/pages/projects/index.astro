@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/portfolio/PageHero.astro';
+import Section from '../../components/ui/Section.astro';
+import ProjectCard from '../../components/portfolio/ProjectCard.astro';
+
+const proyectos = (await getCollection('proyectos', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<BaseLayout
+  title="Proyectos"
+  description="Proyectos personales en desarrollo: Alimapu, Calma App, Doc Infraestructura, LinguaQuest y más."
+>
+  <PageHero
+    titleEs="Todos los Proyectos"
+    titleEn="All Projects"
+    descriptionEs="Proyectos personales en desarrollo, construidos con asistencia de IA."
+    descriptionEn="Personal projects in development, built with AI assistance."
+    breadcrumbs={[
+      { href: '/', es: 'Inicio', en: 'Home' },
+      { es: 'Proyectos', en: 'Projects' },
+    ]}
+  />
+
+  <Section>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {proyectos.map((p) => <ProjectCard entry={p} />)}
+    </div>
+    <div class="text-center mt-10 reveal">
+      <a
+        href="https://github.com/martinmiranda14"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-primary"
+        data-es="Ver todos en GitHub"
+        data-en="View all on GitHub"
+      >
+        Ver todos en GitHub
+      </a>
+    </div>
+  </Section>
+</BaseLayout>

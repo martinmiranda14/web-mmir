@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'certificaciones'>;
+}
+
+const { entry } = Astro.props;
+const { name, year, completed } = entry.data;
+const yearText = typeof year === 'number' ? String(year) : year;
+const showCheck = !yearText;
+---
+
+<div
+  class="reveal cert-item flex items-center gap-4 p-4 rounded-lg transition-colors"
+  style="background: var(--color-surface); border: 1px solid var(--color-border);"
+>
+  <span class="cert-badge" style={completed ? '' : ''}>
+    {
+      showCheck ? (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+      ) : (
+        yearText
+      )
+    }
+  </span>
+  <p class="text-sm" data-es={name.es} data-en={name.en}>{name.es}</p>
+</div>
+
+<style>
+  .cert-item:hover {
+    border-color: var(--color-accent) !important;
+  }
+  .cert-badge {
+    background: var(--color-accent);
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+  }
+</style>

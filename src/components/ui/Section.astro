@@ -1,0 +1,27 @@
+---
+interface Props {
+  id?: string;
+  alt?: boolean;
+  class?: string;
+}
+
+const { id, alt = false, class: className = '' } = Astro.props;
+---
+
+<section
+  id={id}
+  class={`py-24 md:py-28 ${className}`}
+  style={alt ? 'background: var(--color-bg-alt);' : ''}
+>
+  <div class="container-mmir">
+    <slot />
+  </div>
+</section>
+
+<style>
+  @media (max-width: 600px) {
+    section {
+      padding-block: 64px;
+    }
+  }
+</style>

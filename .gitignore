@@ -1,2 +1,17 @@
 .DS_Store
 *.pdf
+
+# Astro
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log*
+
+# Environment
+.env
+.env.production
+.env.local

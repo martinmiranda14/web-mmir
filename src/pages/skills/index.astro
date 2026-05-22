@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/portfolio/PageHero.astro';
+import Section from '../../components/ui/Section.astro';
+import SectionTitle from '../../components/ui/SectionTitle.astro';
+import SkillDetail from '../../components/portfolio/SkillDetail.astro';
+
+const skills = (await getCollection('skills')).sort((a, b) => a.data.order - b.data.order);
+
+const categoryConfig: Record<
+  string,
+  { titleEs: string; titleEn: string; alt: boolean }
+> = {
+  orchestration: { titleEs: 'Orquestación y Contenedores', titleEn: 'Orchestration & Containers', alt: false },
+  cloud: { titleEs: 'Cloud & Infrastructure as Code', titleEn: 'Cloud & Infrastructure as Code', alt: true },
+  languages: { titleEs: 'Lenguajes de Programación', titleEn: 'Programming Languages', alt: false },
+  monitoring: { titleEs: 'Monitoreo y Observabilidad', titleEn: 'Monitoring & Observability', alt: true },
+  security: { titleEs: 'Seguridad y Compliance', titleEn: 'Security & Compliance', alt: false },
+  methodologies: { titleEs: 'Metodologías y Herramientas', titleEn: 'Methodologies & Tools', alt: true },
+};
+
+const categoriesOrder = ['orchestration', 'cloud', 'languages', 'monitoring', 'security', 'methodologies'];
+
+const grouped = categoriesOrder.map((cat) => ({
+  key: cat,
+  config: categoryConfig[cat],
+  items: skills.filter((s) => s.data.category === cat),
+}));
+---
+
+<BaseLayout
+  title="Skills"
+  description="Habilidades técnicas de Martín Miranda - DevOps, Kubernetes, AWS, GCP, Terraform, CI/CD"
+>
+  <PageHero
+    titleEs="Habilidades Técnicas"
+    titleEn="Technical Skills"
+    descriptionEs="Detalle de las tecnologías y herramientas con las que trabajo día a día."
+    descriptionEn="Detailed overview of the technologies and tools I work with daily."
+    breadcrumbs={[
+      { href: '/', es: 'Inicio', en: 'Home' },
+      { es: 'Skills', en: 'Skills' },
+    ]}
+  />
+
+  {
+    grouped.map((group) => (
+      <Section id={group.key} alt={group.config.alt}>
+        <SectionTitle es={group.config.titleEs} en={group.config.titleEn} />
+        <div class="flex flex-col gap-5">
+          {group.items.map((s) => (
+            <SkillDetail entry={s} />
+          ))}
+        </div>
+      </Section>
+    ))
+  }
+
+  <Section>
+    <div class="text-center">
+      <a href="/" class="btn btn-outline" data-es="Volver al inicio" data-en="Back to home">
+        Volver al inicio
+      </a>
+    </div>
+  </Section>
+</BaseLayout>

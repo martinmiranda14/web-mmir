@@ -1,0 +1,89 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { t } from '../../utils/i18n';
+
+interface Props {
+  entry: CollectionEntry<'proyectos'>;
+}
+
+const { entry } = Astro.props;
+const { title, shortDescription, tech, github, status, aiAssisted } = entry.data;
+
+const titleEs = t(title, 'es');
+const titleEn = t(title, 'en');
+const href = `/projects/${entry.id}/`;
+---
+
+<a
+  href={href}
+  class="card card-hover reveal flex flex-col h-full cursor-pointer no-underline"
+  style="color: inherit;"
+>
+  <div class="flex justify-between items-center mb-4" style="color: var(--color-accent);">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+    </svg>
+    {
+      github && (
+        <a
+          href={github}
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub repo"
+          onclick="event.stopPropagation()"
+          class="github-mini"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      )
+    }
+  </div>
+
+  <div class="flex flex-wrap gap-1.5 mb-2">
+    {
+      status === 'in-development' && (
+        <span class="badge badge-status" data-es="En desarrollo" data-en="In development">
+          En desarrollo
+        </span>
+      )
+    }
+    {
+      aiAssisted && (
+        <span class="badge badge-ai" data-es="Hecho con IA" data-en="AI-assisted">
+          Hecho con IA
+        </span>
+      )
+    }
+  </div>
+
+  <h3 class="text-lg font-semibold mb-2" data-es={titleEs} data-en={titleEn}>
+    {titleEs}
+  </h3>
+
+  <p
+    class="text-sm flex-1 mb-4"
+    style="color: var(--color-fg-muted);"
+    data-es={shortDescription.es}
+    data-en={shortDescription.en}
+  >
+    {shortDescription.es}
+  </p>
+
+  <div class="flex flex-wrap gap-2">
+    {tech.map((tag) => <span class="hash-tag">{tag}</span>)}
+  </div>
+</a>
+
+<style>
+  .github-mini {
+    color: var(--color-fg-muted);
+    transition: color var(--transition);
+  }
+  .github-mini:hover {
+    color: var(--color-accent);
+  }
+</style>

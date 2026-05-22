@@ -1,0 +1,31 @@
+---
+interface Props {
+  iconSvg: string;
+  titleEs: string;
+  titleEn: string;
+  tags: string[];
+}
+
+const { iconSvg, titleEs, titleEn, tags } = Astro.props;
+---
+
+<div class="card card-hover reveal skill-category">
+  <div class="text-[var(--color-accent)] mb-4" set:html={iconSvg} />
+  <h3
+    class="text-base font-semibold mb-4"
+    data-es={titleEs}
+    data-en={titleEn}
+  >
+    {titleEs}
+  </h3>
+  <div class="flex flex-wrap gap-2">
+    {tags.map((tag) => <span class="mono-tag">{tag}</span>)}
+  </div>
+</div>
+
+<style>
+  .skill-category:hover .mono-tag {
+    border-color: rgba(99, 102, 241, 0.3);
+    color: var(--color-fg);
+  }
+</style>

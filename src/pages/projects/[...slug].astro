@@ -1,0 +1,144 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/portfolio/PageHero.astro';
+import Section from '../../components/ui/Section.astro';
+import { t } from '../../utils/i18n';
+
+export async function getStaticPaths() {
+  const proyectos = await getCollection('proyectos', ({ data }) => !data.draft);
+  return proyectos.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { title, description, features, tech, github, demo, status, aiAssisted } = entry.data;
+
+const titleEs = t(title, 'es');
+const titleEn = t(title, 'en');
+
+await render(entry); // ensures content collection schema is enforced
+---
+
+<BaseLayout
+  title={titleEs}
+  description={description.es}
+  type="article"
+>
+  <PageHero
+    titleEs={titleEs}
+    titleEn={titleEn}
+    descriptionEs={description.es}
+    descriptionEn={description.en}
+    breadcrumbs={[
+      { href: '/', es: 'Inicio', en: 'Home' },
+      { href: '/projects/', es: 'Proyectos', en: 'Projects' },
+      { es: titleEs, en: titleEn },
+    ]}
+  >
+    <div slot="badges" class="flex flex-wrap gap-1.5 mb-4">
+      {
+        status === 'in-development' && (
+          <span class="badge badge-status" data-es="En desarrollo" data-en="In development">
+            En desarrollo
+          </span>
+        )
+      }
+      {
+        aiAssisted && (
+          <span class="badge badge-ai" data-es="Hecho con IA" data-en="AI-assisted">
+            Hecho con IA
+          </span>
+        )
+      }
+    </div>
+  </PageHero>
+
+  <Section>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card reveal">
+        <h3
+          class="font-semibold mb-4"
+          style="color: var(--color-accent);"
+          data-es="Características"
+          data-en="Features"
+        >
+          Características
+        </h3>
+        <ul class="bullet-list">
+          {
+            features.map((f) => (
+              <li data-es={f.es} data-en={f.en}>
+                {f.es}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="card reveal">
+        <h3 class="font-semibold mb-4" style="color: var(--color-accent);">Tech Stack</h3>
+        <div class="flex flex-wrap gap-2.5 mb-6">
+          {
+            tech.map((t) => (
+              <span
+                class="tech-badge"
+                style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 8px 16px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-fg); transition: all var(--transition);"
+              >
+                {t}
+              </span>
+            ))
+          }
+        </div>
+        <div class="flex flex-wrap gap-3">
+          {
+            github && (
+              <a href={github} target="_blank" rel="noopener" class="btn btn-primary">
+                GitHub
+              </a>
+            )
+          }
+          {
+            demo && (
+              <a
+                href={demo}
+                target="_blank"
+                rel="noopener"
+                class="btn btn-outline"
+                data-es="Ver demo"
+                data-en="View demo"
+              >
+                Ver demo
+              </a>
+            )
+          }
+        </div>
+      </div>
+    </div>
+
+    <a
+      href="/projects/"
+      class="inline-flex items-center gap-2 mt-12 text-sm transition-all back-link"
+      data-es="← Volver a proyectos"
+      data-en="← Back to projects"
+    >
+      ← Volver a proyectos
+    </a>
+  </Section>
+</BaseLayout>
+
+<style>
+  .back-link {
+    color: var(--color-accent);
+  }
+  .back-link:hover {
+    opacity: 0.8;
+    transform: translateX(-4px);
+  }
+  .tech-badge:hover {
+    border-color: var(--color-accent) !important;
+    color: var(--color-accent) !important;
+  }
+</style>

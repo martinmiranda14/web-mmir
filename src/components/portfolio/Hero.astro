@@ -1,0 +1,161 @@
+---
+const greeting = { es: 'Hola, soy', en: "Hi, I'm" };
+const title = {
+  es: 'DevOps Engineer & Ingeniero Civil Telemático',
+  en: 'DevOps Engineer & Telecommunications Engineer',
+};
+const description = {
+  es: 'Especializado en orquestación de contenedores, automatización de infraestructura y migración de servicios cloud. +3 años construyendo y operando infraestructura en producción.',
+  en: 'Specialized in container orchestration, infrastructure automation, and cloud service migration. 3+ years building and operating production infrastructure.',
+};
+const cta = {
+  primary: { es: 'Contáctame', en: 'Contact me' },
+  outline: { es: 'Ver proyectos', en: 'View projects' },
+};
+---
+
+<section
+  id="hero"
+  class="relative min-h-screen flex items-center justify-center"
+  style="padding: calc(var(--nav-height) + 40px) 24px 80px;"
+>
+  <div class="hero-bg-grid"></div>
+
+  <div class="relative z-10 w-full" style="max-width: var(--container-max);">
+    <p
+      class="animate-in mb-3"
+      style="font-family: var(--font-mono); font-size: 1rem; color: var(--color-accent);"
+      data-es={greeting.es}
+      data-en={greeting.en}
+    >
+      {greeting.es}
+    </p>
+
+    <h1
+      class="animate-in mb-3"
+      style="font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 800; letter-spacing: -2px; line-height: 1.1;"
+    >
+      Martín Miranda<span class="accent">.</span>
+    </h1>
+
+    <h2
+      class="animate-in mb-6"
+      style="font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 400; color: var(--color-fg-muted);"
+      data-es={title.es}
+      data-en={title.en}
+    >
+      {title.es}
+    </h2>
+
+    <p
+      class="animate-in mb-9 max-w-2xl text-base"
+      style="color: var(--color-fg-muted); line-height: 1.7;"
+      data-es={description.es}
+      data-en={description.en}
+    >
+      {description.es}
+    </p>
+
+    <div class="animate-in flex flex-wrap gap-4 mb-12">
+      <a
+        href="#contact"
+        class="btn btn-primary"
+        data-es={cta.primary.es}
+        data-en={cta.primary.en}>{cta.primary.es}</a
+      >
+      <a
+        href="#projects"
+        class="btn btn-outline"
+        data-es={cta.outline.es}
+        data-en={cta.outline.en}>{cta.outline.es}</a
+      >
+    </div>
+
+    <div class="animate-in flex gap-5">
+      <a
+        href="https://github.com/martinmiranda14"
+        target="_blank"
+        rel="noopener"
+        aria-label="GitHub"
+        class="social-link"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/martin-miranda-8761a9236"
+        target="_blank"
+        rel="noopener"
+        aria-label="LinkedIn"
+        class="social-link"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+      <a href="mailto:contacto@martinmiranda.org" aria-label="Email" class="social-link">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<style>
+  .hero-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+
+  .social-link {
+    color: var(--color-fg-muted);
+    transition: color var(--transition), transform var(--transition);
+    display: inline-flex;
+  }
+  .social-link:hover {
+    color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+  }
+  .scroll-arrow {
+    width: 24px;
+    height: 24px;
+    border-right: 2px solid var(--color-fg-muted);
+    border-bottom: 2px solid var(--color-fg-muted);
+    transform: rotate(45deg);
+    opacity: 0.4;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    40% {
+      transform: translateX(-50%) translateY(10px);
+    }
+    60% {
+      transform: translateX(-50%) translateY(5px);
+    }
+  }
+</style>

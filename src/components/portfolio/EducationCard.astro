@@ -1,0 +1,41 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'educacion'>;
+  iconSvg: string;
+}
+
+const { entry, iconSvg } = Astro.props;
+const { title, school, period, detail } = entry.data;
+---
+
+<div class="card card-hover reveal">
+  <div class="mb-4" style="color: var(--color-accent);" set:html={iconSvg} />
+  <h3
+    class="text-lg font-semibold mb-1"
+    data-es={title.es}
+    data-en={title.en}
+  >
+    {title.es}
+  </h3>
+  <p class="text-sm mb-1" style="color: var(--color-accent);">{school}</p>
+  <p
+    class="mb-3 text-xs"
+    style="font-family: var(--font-mono); color: var(--color-fg-muted);"
+  >
+    {period}
+  </p>
+  {
+    detail && (
+      <p
+        class="text-sm leading-relaxed"
+        style="color: var(--color-fg-muted);"
+        data-es={detail.es}
+        data-en={detail.en}
+      >
+        {detail.es}
+      </p>
+    )
+  }
+</div>
